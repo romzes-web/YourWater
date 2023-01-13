@@ -1,0 +1,39 @@
+@import "~bootstrap/scss/bootstrap";
+@import './fonts.css';
+@import './base.css';
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  // background: #fff url("/bg.png") top center no-repeat;
+  // background-color: rgba(255, 255, 255, .85);
+  background: linear-gradient(
+    180deg,
+    rgba(208, 230, 246, .45) 0%,
+    #FFFFFF 81.35%);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Lato', -apple-system, 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; // решает проблему с захождением карточек слайдера за экран
+}
+
+a {
+  color: #128ec9;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
+  grid-template-rows: 164px auto 240px;
+
+  @media (max-width: 768px) {
+    grid-template-rows: 164px auto 500px
+  }
+}
